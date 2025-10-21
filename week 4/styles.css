@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", "sans-serif";
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: cornflowerblue;
+  color: whitesmoke;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+  gap: 20px;
+  align-items: center;
+}
+
+.about img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.projects {
+  padding: 40px;
+  background: #f4f4f4;
+}
+
+.project-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 30%;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.contact {
+  padding: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+}
+
+button {
+  padding: 10px;
+  background: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  padding: 20px;
+  background: #222;
+  color: white;
+  text-align: center;
+}
+
+.social-icons img {
+  width: 24px;
+  margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #333;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .project-cards {
+    flex-direction: column;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+}
